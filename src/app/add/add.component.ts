@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { NgxIndexedDBService } from 'ngx-indexed-db';
+import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import * as uuid from 'uuid';
 
@@ -22,7 +23,8 @@ export class AddComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private dbService: NgxIndexedDBService
+    private dbService: NgxIndexedDBService,
+    private _location: Location
   ) { }
 
   ngOnInit() { }
@@ -49,6 +51,10 @@ export class AddComponent implements OnInit {
     }).then(() => {
       this.router.navigate(['/list']);
     });
+  }
+
+  redirect_back(){
+    this._location.back();
   }
 
 }
