@@ -1,17 +1,32 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { COneComponent } from './c-one/c-one.component';
-import { CTwoComponent } from './c-two/c-two.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AddComponent } from './add/add.component';
+import { DisplayComponent } from './display/display.component';
+import { ListComponent } from './list/list.component';
+import { UpdateComponent } from './update/update.component';
 
 const routes: Routes = [
   {
-    path: 'c-one',
-    component: COneComponent,
+    path: '',
+    redirectTo: '/list',
+    pathMatch: 'full'
   },
   {
-    path: 'c-two',
-    component: CTwoComponent,
+    path: 'list',
+    component: ListComponent,
+  },
+  {
+    path: 'edit/:unique_id',
+    component: UpdateComponent,
+  },
+  {
+    path: 'add',
+    component: AddComponent,
+  },
+  {
+    path: 'display/:unique_id',
+    component: DisplayComponent,
   },
   {
     path: '404',
