@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Testdb</title>
@@ -7,7 +8,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+<script>
+  window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB ||
+    window.msIndexedDB;
+
+  window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction ||
+    window.msIDBTransaction;
+  window.IDBKeyRange = window.IDBKeyRange ||
+    window.webkitIDBKeyRange || window.msIDBKeyRange
+
+  if (!window.indexedDB) {
+    window.alert("Your browser doesn't support a stable version of IndexedDB.")
+  }
+</script>
+
 </html>
