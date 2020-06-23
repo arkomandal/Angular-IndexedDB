@@ -43,12 +43,11 @@
             <div class="col-75">
                 <input type="file" class="form-control" formControlName="imageFakePath" name="file" id="file"
                     (change)="imageUpload($event)">
-                <label for="file"> Choose a file</label>
+                <label id="fileLabel" for="file"> Choose a file</label>
+                <div id="imageHolder" *ngIf="imageUrl.trim() != ''">
+                    <img [src]=" imageUrl" height="100px" />
+                </div>
             </div>
-            <div *ngIf="imageUrl.trim() != ''">
-                <img [src]=" imageUrl" />
-            </div>
-
         </div>
         <div class="row">
             <input type="submit" [disabled]="!profileForm.valid" value="Submit" />
