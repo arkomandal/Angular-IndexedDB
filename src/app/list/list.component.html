@@ -1,9 +1,10 @@
-<div class="responsive">
+<div class="container">
+<div >
     <button type="button" (click)="add()">Add</button>
     <div *ngIf="data.length==0">
         <h1>Nothing added. You should try adding one!</h1>
     </div>
-    <div *ngFor="let item of data" class="gallery">
+    <div *ngFor="let item of data">
         <a (click)="display(item.id)" style="cursor:pointer">
             <img [src]="item.imageUrl" />
         </a>
@@ -14,4 +15,5 @@
         <button type="button" (click)="update(item.id)">Update</button>
         <button type="button" (click)="delete(item.id)">Delete</button>
     </div>
+</div>
 </div>

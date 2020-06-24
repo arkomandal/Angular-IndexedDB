@@ -48,6 +48,11 @@ input[type="file"] + label:hover {
 #imageHolder{
     margin-top: 6px;
 }
+img {
+    border-radius: 6px;
+    height: 300px;
+    width: 450px;
+}
 
 /* button input */
 input[type="button"] {
