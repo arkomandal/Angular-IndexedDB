@@ -40,8 +40,8 @@
                 <label for="fname">Photo:</label>
             </div>
             <div class="col-75">
-                <input class="form-control" formControlName="imageFakePath" type="file" name="imageFakePath"
-                    (change)="imageUpload($event)">
+                <input class="form-control" formControlName="imageFakePath" type="file"
+                    (change)="imageUpload($event)" name="file" id="file">
                 <label id="fileLabel" for="file"> Choose a file</label>
                 <div id="imageHolder" *ngIf="imageUrl.trim() != ''">
                     <img [src]=" imageUrl" />

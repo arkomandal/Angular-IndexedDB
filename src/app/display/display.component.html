@@ -1,7 +1,14 @@
-<div>
-    {{name}}
-    {{email}}
-    <img [src]="imageUrl" />
+<div class="container">
+    <div id="imageHolder">
+        <img [src]="imageUrl" />
+    </div>
+    <div id="contentHolder">
+        {{name}}
+    </div>
+    <div id="contentHolder">
+        {{email}}
+    </div>
+    <div id="buttonHolder">
+        <input type="button" (click)="redirect_back()" value="Back" />
+    </div>
 </div>
-
-<button type="button" (click)="redirect_back()">Back</button>

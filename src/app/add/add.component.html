@@ -45,7 +45,7 @@
                     (change)="imageUpload($event)">
                 <label id="fileLabel" for="file"> Choose a file</label>
                 <div id="imageHolder" *ngIf="imageUrl.trim() != ''">
-                    <img [src]=" imageUrl" height="100px" />
+                    <img [src]=" imageUrl" />
                 </div>
             </div>
         </div>
